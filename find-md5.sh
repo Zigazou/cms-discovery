@@ -10,8 +10,11 @@ SANITIZEDPATH=$( echo "$1" \
                )
 MD5S="md5/$SANITIZEDPATH.tsv"
 
-# Calculate the MD5 of a resource located by a URL.
+# Calculate the MD5 of a resource located by a URL. Resource is converted to
+# UNIX style because administrators sometimes converts files to DOS style when
+# uploading them to the server.
 MD5=$( wget --timeout=10 --quiet --output-document=- "$URL" \
+     | tr -d '\r' \
      | md5sum \
      | cut --characters=1-32 \
      )
