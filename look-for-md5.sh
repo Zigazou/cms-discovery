@@ -10,6 +10,9 @@ SANITIZEDPATH=$( echo "$1" \
                )
 MD5S="md5/$SANITIZEDPATH.tsv"
 
+# Check for MD5 dictionary presence.
+[ -f "$MD5S" ] || exit 2
+
 # Calculate the MD5 of a resource located by a URL. Resource is converted to
 # UNIX style because administrators sometimes converts files to DOS style when
 # uploading them to the server.
