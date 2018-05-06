@@ -8,6 +8,8 @@ Usage
 
     ./look-for-all-md5.sh http://www.example.com
 
+Note: the base URL must be given without a trailing slash (/).
+
 Requirements
 ------------
 
