@@ -18,7 +18,7 @@ MD5S="md5/$SANITIZEDPATH.tsv"
 # UNIX style because administrators sometimes converts files to DOS style when
 # uploading them to the server.
 MD5=$( wget --user-agent="$UA" --timeout=10 --quiet --output-document=- "$URL" \
-     | tr -d '\r' \
+     | tr --delete '\r' \
      | md5sum \
      | cut --characters=1-32 \
      )
