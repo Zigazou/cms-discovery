@@ -15,6 +15,16 @@ Note:
 - avoid giving URL which will redirect to another address (sites are not always
   well configured to keep the path when redirecting).
 
+CMS
+---
+
+At the moment, CMS Discovery can guess:
+
+- Drupal 4.7.0 → 8.5.3
+- Joomla 3.6.0 → 3.8.7
+- Spip 2.0.1 → 3.0.27
+- TYPOLight/Contao 2.7.5, 2.8.3, 2.9.3, 2.10.3
+
 Requirements
 ------------
 
