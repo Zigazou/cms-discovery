@@ -1,6 +1,7 @@
 #!/bin/bash
 
 URL="$1"
+UA="CMS Discovery"
 
 # Extract and sanitize the path to get the file path to an MD5s dictionary.
 SANITIZEDPATH=$( echo "$1" \
@@ -16,7 +17,7 @@ MD5S="md5/$SANITIZEDPATH.tsv"
 # Calculate the MD5 of a resource located by a URL. Resource is converted to
 # UNIX style because administrators sometimes converts files to DOS style when
 # uploading them to the server.
-MD5=$( wget --timeout=10 --quiet --output-document=- "$URL" \
+MD5=$( wget --user-agent="$UA" --timeout=10 --quiet --output-document=- "$URL" \
      | tr -d '\r' \
      | md5sum \
      | cut --characters=1-32 \

@@ -5,4 +5,4 @@ core/misc/drupal.js
 core/themes/bartik/css/maintenance-page.css
 modules/block/block.css
 robots.txt
-
+language/en-GB/install.xml
